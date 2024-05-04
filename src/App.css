@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: antiquewhite;
 }
 
 .App-logo {
@@ -14,8 +15,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: rgb(130, 156, 220);
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +33,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+/* App.css */
+.color-display {
+  border: 2px solid #fff; /* 添加白色邊框 */
+  border-radius: 40px; /* 添加圓角效果 */
 }
