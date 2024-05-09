@@ -16,6 +16,7 @@
 
 .App-header {
   background-color: rgb(130, 156, 220);
+  background-size: cover; /* 讓背景圖像自適應大小 */
   min-height: 50vh;
   display: flex;
   flex-direction: column;
