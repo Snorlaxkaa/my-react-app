@@ -41,7 +41,17 @@ function App() {
           <label>B: <input type="range" name="b" min="0" max="255" value={color.b} onChange={updateColor} /></label>
           <span>{color.b}</span>
         </div>
-        <button onClick={saveColor} style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px' }}>保存顏色</button>
+        <button
+  onClick={saveColor}
+  style={{
+    marginTop: '20px',
+    padding: '10px 20px',
+    fontSize: '16px',
+    borderRadius: '10px' // 調整這個值來控制圓角的大小
+  }}
+>
+  保存顏色
+</button>
         <div style={colorStyle} className="color-display">當前顏色</div>
       </header>
     </div>
