@@ -15,8 +15,7 @@
 }
 
 .App-header {
-  background-color: rgb(130, 156, 220);
-  background-size: cover; /* 讓背景圖像自適應大小 */
+  background-color: blueviolet;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +23,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  height: 1000px;
 }
 
 .App-link {
@@ -39,18 +37,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-/* App.css */
-.color-display {
-  border: 2px solid #fff; /* 添加白色邊框 */
-  border-radius: 40px; /* 添加圓角效果 */
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;              /* 增加滑塊的寬度 */
-  height: 15px;             /* 增加滑塊的高度 */
-  background: #333;         /* 設置滑塊的顏色 */
-  cursor: pointer;
-  border-radius: 50%;       /* 讓滑塊成圓形 */
 }
