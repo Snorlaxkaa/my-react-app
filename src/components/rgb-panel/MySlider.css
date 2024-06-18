@@ -1,0 +1,49 @@
+/* 設置滑塊容器的樣式 */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* 使滑塊和數值垂直排列 */
+  margin: 20px;
+}
+
+/* 設置滑塊的樣式 */
+.slider {
+  width: 300px; /* 增加滑塊的寬度 */
+  height: 10px; /* 增加滑塊的高度 */
+  -webkit-appearance: none; /* 移除默認外觀 */
+  appearance: none;
+  background: #ff6699; /* 設置滑塊的背景顏色 */
+  outline: none; /* 移除滑塊的外邊框 */
+  opacity: 0.7; /* 設置滑塊的不透明度 */
+  transition: opacity 0.2s; /* 添加過渡效果 */
+}
+
+.slider:hover {
+  opacity: 1; /* 懸停時的不透明度 */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* 移除默認外觀 */
+  appearance: none;
+  width: 30px; /* 增加滑塊手柄的寬度 */
+  height: 30px; /* 增加滑塊手柄的高度 */
+  background: #333; /* 設置滑塊手柄的背景顏色 */
+  cursor: pointer; /* 設置滑塊手柄的鼠標指針 */
+  border-radius: 50%; /* 設置滑塊手柄為圓形 */
+}
+
+.slider::-moz-range-thumb {
+  width: 30px; /* 增加滑塊手柄的寬度 */
+  height: 30px; /* 增加滑塊手柄的高度 */
+  background: #333; /* 設置滑塊手柄的背景顏色 */
+  cursor: pointer; /* 設置滑塊手柄的鼠標指針 */
+  border-radius: 50%; /* 設置滑塊手柄為圓形 */
+}
+
+/* 設置滑塊數值的樣式 */
+.slider-value {
+  font-size: 24px; /* 增加數值的字體大小 */
+  color: #333; /* 設置數值的顏色 */
+  margin-top: 10px; /* 設置數值與滑塊之間的距離 */
+}

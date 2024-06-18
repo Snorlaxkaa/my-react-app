@@ -1,62 +1,78 @@
+/* 設置計算器容器的樣式 */
 .calculator {
-    width: 320px;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 10px;
-    background-color: grey;
-    margin: auto;
-    padding: 10px;
+    width: 400px; /* 設置計算器的寬度為400px */
+    color: white; /* 設置文本顏色為白色 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 設置字體樣式 */
+    border-radius: 20px; /* 設置邊框半徑，讓容器有圓角效果 */
+    background-color: #ffccdd; /* 設置背景顏色為粉紅色 */
+    margin: auto; /* 設置自動外邊距，讓計算器居中 */
+    padding: 20px; /* 設置內邊距 */
 }
 
+/* 設置按鈕容器的樣式 */
 .board {
-    display: inline-block;
-    margin: 10px;
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 允許按鈕換行 */
+    justify-content: center; /* 讓按鈕在容器中居中 */
+    margin: 20px; /* 設置外邊距 */
 }
 
+/* 設置顯示屏的樣式 */
 .display {
-    width: 100%;
-    height: 75px;
-    background-color: black;
-    text-align: right;
-    font-size: 50px;
-    border-radius: 5px;
+    width: 100%; /* 設置寬度為100%，佔滿父容器 */
+    height: 90px; /* 設置顯示屏高度 */
+    background-color: black; /* 設置背景顏色為黑色 */
+    text-align: right; /* 設置文本右對齊 */
+    font-size: 70px; /* 設置字體大小 */
+    border-radius: 10px; /* 設置邊框半徑，讓顯示屏有圓角效果 */
+    margin-bottom: 20px; /* 設置底部外邊距 */
+    padding: 10px; /* 設置內邊距 */
+    box-sizing: border-box; /* 包括內邊距和邊框在內的總寬度和高度 */
 }
 
+/* 設置按鈕的樣式 */
 .btn {
-    background-color: #323232;
-    color: white;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    border-radius: 50%;
-    outline: none;
-    border: 0px;
-    padding: 5%;
-    margin: 5px;
-    cursor: pointer;
+    background-color: #f1b8ce; /* 設置按鈕背景顏色為淺粉色 */
+    color: white; /* 設置按鈕文本顏色為白色 */
+    width: 78px; /* 設置按鈕寬度 */
+    height: 78px; /* 設置按鈕高度 */
+    font-size: 35px; /* 設置字體大小 */
+    border-radius: 50%; /* 設置邊框半徑，讓按鈕有圓形效果 */
+    outline: none; /* 移除按鈕的外邊框 */
+    border: 0px; /* 設置按鈕邊框寬度為0 */
+    margin: 6px; /* 設置按鈕外邊距 */
+    cursor: pointer; /* 設置鼠標懸停時顯示為手型 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* 設置按鈕陰影 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 添加背景顏色和文本顏色的過渡效果 */
 }
 
+/* 設置動作按鈕的樣式 */
 .btn-action {
-    background-color: brown;
-    color: bisque;
+    background-color: #ff99aa; /* 設置背景顏色為深粉紅色 */
+    color: white; /* 設置文本顏色為白色 */
 }
 
+/* 設置運算符按鈕的樣式 */
 .btn-operator {
-    background-color: coral;
+    background-color: #ff6699; /* 設置背景顏色為中粉紅色 */
+    color: white; /* 設置文本顏色為白色 */
 }
 
+/* 設置"0"按鈕的樣式 */
 .btn-0 {
-    width: 130px;
-    border-radius: 30px;
+    width: calc(75px * 2 + 12px); /* 計算按鈕寬度為兩個普通按鈕的寬度加上間距 */
+    border-radius: 35px; /* 設置邊框半徑，讓按鈕有橢圓形效果 */
 }
 
-.btn:hover{
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+/* 設置按鈕懸停時的樣式 */
+.btn:hover {
+    background-color: #ff99aa; /* 設置懸停時的背景顏色為深粉紅色 */
+    color: black; /* 設置懸停時的文本顏色為黑色 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 增強陰影效果 */
 }
 
-.btn:active{
-    background-color: darkred;
-    color: white;
+/* 設置按鈕點擊時的樣式 */
+.btn:active {
+    background-color: #ff6699; /* 設置點擊時的背景顏色為中粉紅色 */
+    color: white; /* 設置點擊時的文本顏色為白色 */
 }

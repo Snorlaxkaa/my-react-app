@@ -1,24 +1,25 @@
 import { useState } from "react";
+import "./MySlider.css"; // 引入CSS文件
 
-function MySlider({onChange}) {
+function MySlider({ onChange }) {
   const [value, setValue] = useState(128);
   const handleChange = (e) => {
     setValue(e.target.value);
-    if (onChange){
+    if (onChange) {
       onChange(e.target.value);
     }
   };
   return (
-    <div>
+    <div className="slider-container"> {/* 添加容器樣式類 */}
       <input
         type="range"
-        width = "200"
+        className="slider" // 添加滑塊樣式類
         min="0"
         max="255"
         value={value}
         onChange={handleChange}
       />
-      <span>{value}</span>
+      <span className="slider-value">{value}</span> {/* 添加文本樣式類 */}
     </div>
   );
 }

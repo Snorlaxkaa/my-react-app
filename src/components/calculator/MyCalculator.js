@@ -1,55 +1,32 @@
 import React, { useState } from "react";
-import MyDisplay from "./MyDisplay";
 import MyButton from "./MyButton";
+import MyDisplay from "./MyDisplay";
 import "./MyCalculator.css";
 
 function MyCalculator() {
   const [result, setResult] = useState("0");
-  // handleClick是MyButton的事件處理常式
-  const handleClick = (value) => {
-    // alert(value);
-    switch (value) {
-      case "0":
-      case "1":
-      case "2":
-      case "3":
-      case "4":
-      case "5":
-      case "6":
-      case "7":
-      case "8":
-      case "9":
-      case ".":
-      case "+":
-      case "-":
-      case "*":
-      case "/":
-        if (result === "0") {
-          setResult(value);
-        } else {
-          setResult(result + value);
-        }
-        break;
-      case "=":
+
+  const handleButtonClick = (value) => {
+    // 處理按鈕點擊事件的邏輯
+    if (value === "c") {
+      setResult("0");
+    } else if (value === "+/-") {
+      setResult((prev) => (prev.charAt(0) === "-" ? prev.slice(1) : "-" + prev));
+    } else if (value === "=") {
+      try {
         setResult(eval(result).toString());
-        break;
-      case "c":
-        setResult("");
-        break;
-      case "+/-":
-        setResult(parseInt(result, 10) * -1);
-        break;
-      case "%":
-        setResult(parseInt(result, 10) / 100);
-        break;
-      default:
-        break;
+      } catch {
+        setResult("Error");
+      }
+    } else {
+      setResult((prev) => (prev === "0" ? value : prev + value));
     }
   };
+
   return (
     <div className="calculator">
-      <MyDisplay result = {result} />
-      <MyButton buttonClicked={handleClick} />
+      <MyDisplay result={result} />
+      <MyButton buttonClicked={handleButtonClick} />
     </div>
   );
 }
